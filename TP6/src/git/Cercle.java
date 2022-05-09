@@ -22,7 +22,11 @@ public class Cercle {
      * @return un double égal au périmètre du cercle
      */
     public static double perimetre(double leRayon) {
-        return 2*Math.PI*leRayon;
+        if (leRayon < 0) {
+            return 0.0;
+        } else {
+            return 2*Math.PI*leRayon;
+        }
     }
 
     
@@ -32,7 +36,11 @@ public class Cercle {
      * @return un double égal à la surface du dsique
      */
     public static double surface(double leRayon) {
-        return Math.PI*leRayon*leRayon;
+        if (leRayon < 0) {
+            return 0.0;
+        } else {
+            return Math.PI*leRayon*leRayon;
+        }
     }
 
     

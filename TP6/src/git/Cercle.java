@@ -34,6 +34,33 @@ public class Cercle {
     public static double surface(double leRayon) {
         return Math.PI*leRayon*leRayon;
     }
+    
+    /**
+     * Détermine le volume d'un cylindre
+     * @param leDiametre un double égal au diamètre du cylindre
+     * @param laHauteur un double égal à la hauteur du cylindre
+     * @return un double égal au volume du cylindre
+     */
+    public static double volume(double leDiametre, double laHauteur) {
+        return surface(leDiametre / 2) * laHauteur;
+    }
+
+    
+    /**
+     * Détermine la surface de l'enveloppe du cylindre
+     * @param leDiametre un double égal au diamètre du cylindre
+     * @param laHauteur un double égal à la hauteur du cylindre
+     * @return un double égal à la surface de l'enveloppe du cylindre
+     */
+    public static double enveloppe(double leDiametre, double laHauteur) {
+        
+        /*
+         * on additionne la surface de la base multipliée par 2 et la 
+         * surface du pourtour du cylindre
+         */
+        return surface(leDiametre / 2 ) * 2 
+                       + perimetre(leDiametre / 2) * laHauteur;
+    }
 
     
    
